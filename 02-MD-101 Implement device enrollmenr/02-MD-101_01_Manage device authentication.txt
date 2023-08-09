@@ -1,0 +1,37 @@
+Manage device authentication
+
+
+Besides managing user authentication and protecting user identities, it is also very important to cover device authentication when deploying Azure AD in your organization.
+ In a similar way to a user, a device is becoming another identity you want to protect. You can also use a device to protect your resources at any time and location. 
+Azure AD allows you to join Windows based devices, as well as to manage them by using somewhat different methods than in Active Directory Domain Services. In this module, you will learn about device authentication and management in Azure AD.
+
+Describe Azure AD join
+
+Usage Scenarios for Azure AD Join
+
+Scenario 1: Businesses Largely in the Cloud
+* Azure Active Directory join (Azure AD join) can benefit you if you currently operate and manage identities for your business in the cloud or are moving to the cloud soon.
+* You can use an account that you have created in Azure AD to sign into Windows. 
+* Through the first run experience (FRX) process, or by joining Azure AD from the settings menu, your users can join their machines to Azure AD.
+* Your users can also enjoy single sign-on (SSO) access to cloud resources like Microsoft 365, either in their browsers or in Office applications.
+
+Scenario 2: Education Institutions
+You may want to join devices to Azure AD in these scenarios:
+* If most applications and resources that you use are in the cloud.
+* If you want to separate temporary accounts.
+* If you want to enable users to join their own devices to the organizational environment.
+* You want to transition to cloud-based infrastructure
+* You have remote branch offices with limited on-premises infrastructure
+Hybrid Azure AD join
+
+Windows current devices
+* Windows 10 or later
+* Windows Server 2016 or later
+Windows down-level devices
+* Windows 8.1
+* Windows Server 2012 R2
+
+Reasons to use Hybrid Azure AD join:
+* You have Win32 apps deployed to these devices that rely on Active Directory machine authentication.
+* You require Group Policy to manage some of your devices.
+* You want to continue to use imaging solutions to configure devices for your employees.

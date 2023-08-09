@@ -1,0 +1,115 @@
+Implement mobile application management
+
+
+This module introduces Mobile Application Management (MAM).
+You will learn about considerations for implementing MAM and you will be introduced to the management of MAM in Configuration Manager. 
+You will also learn about how to use Intune for MAM and how to implement and manage MAM policies in Intune.
+
+Examine mobile application management
+
+Intune MAM supports two configurations:
+* Intune MDM + MAM
+* MAM without device enrollment
+
+The important benefits of using app protection policies are:
+* Protecting your company data at the app level. 
+* End-user productivity isn't affected, and policies don't apply when using the app in a personal context.
+
+MDM makes sure that the device is protected. Some examples:
+* You can require a PIN to access the device, or you can deploy managed apps to the device. You can also deploy apps to devices through your MDM solution, to give you more control over app management.
+* App protection policies makes sure that the app-layer protections are in place. For example, you can:
+   * Require a PIN to open an app in a work context
+   * Control the sharing of data between apps
+   * Prevent the saving of company app data to a personal storage location
+
+Examine considerations for mobile application management
+
+Intune-managed apps are enabled with a rich set of mobile application protection policies and allow you to:
+* Restrict copy-and-paste and save-as functions
+* Configure web links to open inside the Intune Managed Browser app
+* Enable multi-identity use and app-level conditional access
+* Apply data loss prevention policies without managing the user's device
+* Enable app protection without requiring enrollment
+* Enable app protection on devices managed with 3rd party EMM tools
+
+Prepare line-of-business apps for app protection policies
+
+Intune App Wrapping Tool
+Reasons to use the App Wrapping Tool:
+* Your app does not have built-in data protection features
+* Your app is simple
+* Your app is deployed internally
+* You don't have access to the app's source code
+* You didn't develop the app
+* Your app has minimal user authentication experiences
+
+Intune App SDK
+
+Reasons to use the SDK:
+* Your app does not have built-in data protection features
+* Your app is complex and contains many experiences
+* Your app is deployed on a public app store such as Google Play or Apple's App Store
+* You are an app developer and have the technical background to use the SDK
+* Your app has other SDK integrations
+* Your app is frequently updated
+
+Apps without app protection policies
+
+App protection policy settings include:
+* Data relocation policies like Prevent Save As, and Restrict cut, copy, and paste.
+* Access policy settings like Require simple PIN for access, and Block managed apps from running on jailbroken or rooted devices.
+
+Data protection with app protection policies
+
+The preceding illustration shows the layers of protection that MDM and app protection policies offer together.
+
+The MDM solution:
+* Enrolls the device
+* Deploys the apps to the device
+* Provides ongoing device compliance and management
+App protection policies add value by:
+* Helping protect company data from leaking to consumer apps and services
+* Applying restrictions like save-as, clipboard, or PIN, to client apps
+* Wiping company data from apps without removing those apps from the device
+
+Data protection with app protection policies on devices managed by a Mobile Device Management solution
+
+For BYOD devices not enrolled in any MDM solution, App protection policies can help protect company data at the app level. However, there are some limitations to be aware of:
+* You can't deploy apps to the device. The end user has to get the apps from the store.
+* You can't provision certificate profiles on these devices.
+* You can't provision company Wi-Fi and VPN settings on these devices.
+
+Implement mobile application management policies in Intune
+
+Create and assign app protection policies
+
+Use the following steps to create an app protection policy:
+1. In the Endpoint Manager admin center, in the navigation pane, select Apps.
+2. In the Policy section, select App protection policies.
+3. Select + Create Policy and select a platform.
+
+Creating an app protection policy will present several tabs for configuration:
+* Basics.
+* Apps.
+* Data protection.
+* Access Requirements. 
+* Conditional Launch. 
+* Assignments.
+* Review + create.
+
+
+Manage mobile application management policies in Intune
+
+
+There are three different places to monitor the compliance status:
+* Summary view
+* Detailed view
+* Reporting view
+Reporting view
+
+
+To view these reports, select Apps > App protection status > Reports. The Reports pane provides several reports based on user and app.
+* User report.
+* App report
+* User configuration report
+* App configuration report

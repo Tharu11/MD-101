@@ -1,0 +1,26 @@
+Enroll devices using Microsoft Endpoint Configuration Manager
+
+
+This module introduces you to modern device management options.
+You'll be introduced to Microsoft's management platform, Microsoft Endpoint Manager. 
+You'll be introduced to the two primary tools within Endpoint Manager, Microsoft Endpoint Configuration Manager and Microsoft Intune. 
+This module looks at client deployment options and some of the high-level management and monitoring options that are available using Configuration Manager.
+
+Deploy the Microsoft Endpoint Configuration Manager client
+
+Client Deployment Options
+
+To successfully manage a Windows computer using Configuration Manager, you can deploy the client several ways. Below are some of the most used methods:
+* Client push.
+* Manual deployment: 
+* OS deployment. 
+* Microsoft Intune.
+
+Monitor the Microsoft Endpoint Configuration Manager client
+
+From within the Configuration Manager console, there are a number in-built features (status) that can alert you if a client is experiencing issues or could require further attention:
+* Client online status
+* Client activity
+* Primary User
+* Operating System Build
+* Client check

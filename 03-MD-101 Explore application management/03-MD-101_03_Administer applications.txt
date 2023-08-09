@@ -1,0 +1,56 @@
+Administer applications
+
+
+In this module, you will be introduced to managing apps on Intune managed devices.
+You will then learn how to manage apps on non-enrolled devices. 
+You will be introduced to the various options you have when deploying Microsoft 365 Apps, such as Intune, Configuration Manager, and manually,
+The module will then conclude with an overview of how to use IE Mode with Microsoft Edge.
+Lastly you will learn how to track your installed applications, licenses, and assigned apps using Intune.
+
+Manage apps with Intune
+
+To deploy an app from Intune, perform the following steps:
+* Ensure that Intune supports the app. 
+* Create Azure AD groups for either users or devices.
+* Add the app to Intune.
+* Configure policies. 
+* Monitor the results of the app deployment. 
+
+App categories
+To create your own app categories in Intune, perform the following steps:
+1. On the Apps page, select App categories under Other.
+2. Select Add, and enter a name for the category in the Name field, and then select Create.
+
+Assign apps
+When you assign apps by using Intune, you have the following options in the Assignments tab:
+* Available.
+* Not Applicable. 
+* Required. 
+* Uninstall.
+* Available for enrolled devices.
+* Available with or without enrollment.
+
+Manage Apps on non-enrolled devices
+
+A managed app is an app for which Intune manages the whole lifecycle such as:
+* Deploy the app
+* Manage app updates
+* Monitor app installation
+* Selectively wipe the entire app
+
+Deploying Microsoft 365 Apps with Intune
+
+Deploy Microsoft 365 Apps with Intune
+* Endpoint Administrator admin center.
+* Apps, then select All Apps. Select + Add.
+* Select app type panel, in the App type list, under Microsoft 365 Apps, select Windows 10 and later.
+* Select. In the App suite information tab, configure the following: (Suite Name:, Suite Description, Publisher, Category, Show this as a featured app in the Company Portal, Information URL, Privacy URL, Developer, Owner, Notes, Logo)
+* Next. In the Configure App Suite tab, you can select the Microsoft 365 apps you wish to include.( Select Office apps, Select other Office apps, Architecture, Update Channel, Remove other versions, Use shared computer activation, Accept the Microsoft Software License Terms on behalf of users, Install background service for Microsoft Search in Bing, Languages)
+
+App Inventory Review
+
+You can also find information about all assigned apps and determine which version of a given app that you have deployed. The following pages provide that information:
+* Apps > Overview page
+* Apps > Monitor > App licenses page
+* Apps > Monitor > Discovered apps page
+* Apps > Monitor > App install status page

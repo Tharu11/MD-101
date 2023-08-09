@@ -1,0 +1,147 @@
+Enroll devices using Microsoft Intune
+
+
+In this module, you'll be introduced to managing devices using Intune.
+You'll learn how to configure and set up Intune, so you can more easily manage Windows, Android and iOS devices. 
+You'll learn how to enroll devices in Intune, as well as considerations for facilitating enrollment
+The module will conclude with an overview of verifying device inventory in Intune using Graph API and PowerBI.
+
+Manage mobile devices with Intune
+
+Device Management Lifecycle
+Managing mobile devices, like most IT management activities, follows a lifecycle. The mobile device management lifecycle contains four phases:
+* Enroll. 
+* Configure.
+* Protect. 
+* Retire.
+
+Explain considerations for device enrollment
+
+There are several different ways to enroll Windows devices to MDM, based on device type and its current state, including:
+* If a device is already joined to your on-premises AD DS, you can use Group Policy to automatically enroll it to MDM.
+* You can configure integration between Azure AD and MDM so that when you join a Windows device to Azure AD, it’s automatically enrolled to MDM.
+* You can enroll Windows devices to MDM manually, by using a Settings app, provisioning packages, or the Company Portal app.
+
+Supported Devices
+Intune supports devices running the following operating systems through device enrollment, which was discussed in the previous topic:
+* Windows 10/11 (Home, Pro, Education, S mode, and Enterprise versions)
+* Windows 10/11 Cloud PCs on Windows 365
+* Windows 10 IoT and Windows 10 Holographic
+* Windows 10 2019 LTSC
+* Windows RT 8.1, and Windows 8.1 (sustaining mode)
+* Apple iOS/iPadOS 13.0 and later
+* Mac OS X 10.15 and later
+* Android 6.0 and later, including Samsung Knox 2.4 and later and Android for Work
+
+Define Allowed Devices
+You can manage device enrollment by configuring the following enrollment options:
+* Terms and conditions.
+* Enrollment restrictions.
+* Enable Apple device enrollment.
+* Corporate identifiers. 
+* Multi Factor authentication.
+* Device enrollment manager.
+
+Enroll Windows devices in Intune
+
+The following methods, that can be used to enroll in Intune are:
+* Method 1: Add work or school account
+* Method 2: Enroll in MDM only (user driven)
+* Method 3: Azure AD join (OOBE)
+* Method 4: Azure AD join (autopilot – user-driven deployment mode)
+* Method 5: Azure AD join (autopilot self-deploying mode)
+* Method 6: Enroll in MDM only (Device Enrollment Manager)
+* Method 7: Configuration Manager co-management
+* Method 8: Azure AD join (bulk enrollment)
+
+Enroll Android devices in Intune
+
+To enroll an Android device using the Company Portal, perform the following steps:
+* Install the free Intune Company Portal app from Google Play.
+* Open the Company Portal app.
+* On the Company Portal Welcome screen, tap Sign in, and then sign in with your work or school account.
+* Follow the instructions given in the Company Portal. The end-user experience can vary based on the policies assigned to the user and/or device.
+
+Android Enterprise work profile. 
+* Android Enterprise dedicated.
+* Android Enterprise fully managed.
+
+Enroll iOS devices in Intune
+
+Enroll your iOS device using Company Portal
+* Download and install the Intune Company Portal from Apple app store.
+* Open the Company Portal app.
+* On the Company Portal Welcome screen, tap Sign in, and then sign in with your work or school account.
+* Follow the instructions given in the Company Portal. The end-user experience can vary based on the policies assigned to the user and/or device.
+
+Company-owned iOS devices
+For organizations that buy devices for their users, Intune supports the following iOS company-owned device enrollment methods:
+* Apple's Device Enrollment Program (DEP)
+* Apple School Manager
+* Apple Configurator Setup Assistant enrollment
+* Apple Configurator direct enrollment
+* You can also enroll company-owned iOS devices with a device enrollment manager account.
+* Device Enrollment Program. Organizations can purchase iOS devices through Apple's Device Enrollment Program (DEP). DEP lets you deploy an enrollment profile “over the air” to bring devices into management.
+
+Explore device enrollment manager
+
+Example of a device enrollment manager scenario
+
+What can a device enrollment manager do?
+Only users in Azure AD can be added as a device enrollment manager.
+
+The DEM user can:
+* Enroll up to 1000 devices in Intune
+* Sign in to the Company Portal to get company apps
+* Configure access to company data by deploying role-specific apps to the tablets
+
+Limitations of devices that are enrolled with a DEM account
+Devices that are enrolled with a device enrollment manager account have the following limitations:
+* No per-user access. Because devices don't have an assigned user, the device has no email or company data access. VPN configurations, for example, could still be used to provide device apps with access to data.
+* The DEM user can't unenroll DEM-enrolled devices on the device itself by using the Company Portal. The Intune admin can unenroll.
+* Only the local device appears in the Company Portal app or website.
+* Users can’t use Apple Volume Purchase Program (VPP) apps with user licenses because of per-user Apple ID requirements for app management.
+* (iOS only) If you use DEM to enroll iOS devices, you can't use the Apple Configurator, Apple Device Enrollment Program (DEP), or Apple School Manager (ASM) to enroll devices. This means that you can't put the device in supervised mode and thus won't have access to some configuration options.
+* (Android only) There's a limit to the number of Android work profile devices that can be enrolled with a single DEM account. Up to 10 Android work profile devices may be enrolled per DEM account. This limitation doesn't apply to legacy Android enrollment.
+* Devices can install VPP apps if they have device licenses.
+* An Intune device license isn't required to use DEM.
+Add a device enrollment manager
+* Sign in to Endpoint Manager admin center located at https://endpoint.microsoft.com.
+* In the left navigation, select Devices - Enroll devices - Device enrollment managers.
+* Select Add. On the Add User panel, enter a user principal name for the DEM user, and select Add. The DEM user is added to the list of DEM users.
+Permissions for DEM
+
+Global or Intune Service Administrator Azure AD roles are required to:
+* Complete tasks that are related to DEM enrollment in the Admin Portal
+* Access all DEM users despite role-based access control (RBAC) permissions being listed and available under the custom User role
+
+Manage devices remotely
+
+The Devices feature provides additional details into the devices you manage, including their hardware and the apps installed. To view all your devices, and their properties do the following:
+* Sign in to the Endpoint Manager admin center.
+* Select Devices and then select All Devices. Select an individual device to view.
+
+You can perform the following remote actions on the device:
+* Retire.
+* Wipe.
+* Delete.
+* Remote lock (Android, iOS, macOS). 
+* Sync.
+* Reset passcode (iOs/Android).
+* Restart.
+* Fresh Start (Windows 10 and later only). 
+* AutoPilot Reset (Windows 10 and later only).
+* Quick scan (Windows 10 and later only).
+* Full scan (Windows 10 and later only).
+* Update Microsoft Defender Security Intelligence.
+* BitLocker key rotation.
+* Rename Device.
+* New Remote Assistance Session.
+* Locate device (Windows 10 and later, iOS, Android Enterprise dedicated).
+
+On the device details page, you can also manage and monitor the following:
+* Use Properties to assign a device category you create and change ownership of the device to a personal device, or a corporate device.
+* Hardware includes many details about the device, including the device ID, the operating system and version, storage space, the model and manufacturer, conditional access settings, and more details.
+* Discovered apps lists all the apps that Intune found installed on the device, and the app versions. You can also Export the app list into a .csv file.
+* Device compliance lists all assigned compliance policies, and if the device is compliant or not compliant.
+* Device configuration shows all device configuration policies assigned to the device, and if the policy succeeded or failed.

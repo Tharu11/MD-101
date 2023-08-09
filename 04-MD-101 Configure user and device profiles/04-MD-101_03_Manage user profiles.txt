@@ -1,0 +1,78 @@
+Manage user profiles
+
+
+In this module, you will be introduced to the various user profile types that exist in Windows for on-premises devices.
+You will learn about the benefits of various profiles and how to switch between types of profiles.
+You will examine how Folder Redirection works and how to set it up.
+The module will then conclude with an overview of Enterprise State roaming and how to configure it for Azure AD devices.
+
+Examine user profile
+
+User profiles provide the following advantages:
+* When the user logs on to a computer, the system uses the same settings that were in use when the user last logged off.
+* When sharing a computer with other users, each user receives their customized desktop after logging on.
+* Settings in the user profile are unique to each user. The settings cannot be accessed by other users. Changes made to one user's profile do not affect other users or other users' profiles.
+
+Explore user profile types
+
+Windows has different types of user profiles for the various different scenarios in how user configurations might be applied. The four common different types of user profiles are:
+* Local User Profile.
+* Roaming User Profile.
+* Mandatory User Profile.
+* Temporary User Profiles.
+
+Examine options for minimizing user profile size
+
+Administrators can do this in several ways:
+* Use quotas to limit the space that is available to a user on a volume or on a shared folder where the roaming user profile is stored.
+* Redirect folders that typically contain large user files and are stored in the user profile by default, for example, the Documents folder, outside of the user profile.
+* Use the Group Policy setting to limit user profile sizes. You can limit the size of local or roaming user profiles by configuring settings in the user part of Group Policy.
+
+Deploy and configure folder redirection
+
+Folder Redirection provides several advantages:
+* Redirected folder content is available from any computer in the domain.
+* Redirected folder content does not copy to local computers, which minimizes network traffic during user sign-in.
+* Administrators can set quotas (limiting disk space) and permissions on redirected folders. By doing so, administrators can control how much space a user can utilize and whether the user can modify contents of that part of the folder - for example, Desktop.
+* Redirected folders are stored on network locations (network shares) and not on local computers. If a local hard drive fails, users can still access data in redirected folders from a different computer.
+* Redirected folder content can be backed up centrally because it is not stored locally on user computers. If Shadow Copies for Shared Folders is configured on a network location, users can access previous versions of their redirected files.
+Sync user state with Enterprise State Roaming
+
+ESR and Microsoft Edge (Chromium based)
+
+With Microsoft Edge sync, the following data will sync between devices:
+* Favorites
+* Passwords
+* Form-fill
+* History
+* Open tabs (sessions)
+* Settings (preferences)
+* Extensions
+
+Configure Enterprise State Roaming in Azure
+
+What data roams?
+Windows settings: the PC settings that are built into the Windows operating system. Generally, these are settings that personalize your PC, and they include the following broad categories:
+* Theme, which includes features such as desktop theme and taskbar settings.
+* Internet Explorer settings, including recently opened tabs and favorites.
+* Passwords, including Internet passwords, Wi-Fi profiles, and others.
+* Language preferences, which include settings for keyboard layouts, system language, date and time, and more.
+* Ease of access features, such as high-contrast theme, Narrator, and Magnifier.
+* Other Windows settings, such as mouse settings.
+
+Data storage
+
+View per-user device sync status
+Follow these steps to view a per-user device sync status report.
+* Sign in to the Azure portal.
+* Select Azure Active Directory > Users > All users.
+* Select the user, and then select Devices.
+* Under Show, select Devices syncing settings and app data to show sync status.
+* If there are devices syncing for this user, you see the devices shown here.
+
+Explicit deletion
+
+Explicit deletion is when an Azure admin deletes a user or a directory or otherwise requests explicitly that data is to be deleted.
+* User deletion
+* Directory deletion
+* On request deletion
