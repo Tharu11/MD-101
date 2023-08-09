@@ -1,0 +1,92 @@
+Manage identities in Azure Active Directory
+
+
+Similar to locally deployed AD DS, you manage Azure AD objects and settings, but by using a different set of tools.
+When using Azure AD, you will need to create users, groups, and devices
+Also, you can use role-based access control (RBAC) in Azure to configure and delegate permissions.
+Unlike AD DS, you can manage multiple Azure AD tenants by using an account from a single tenant.
+
+Examine RBAC and user roles in Azure AD
+
+User roles in Azure AD
+You can use three types of accounts with Azure AD:
+* An organizational account that the tenant administrator or a co-administrator creates within the default Azure directory or any custom Azure directory—for example, user@domain1.onmicrosoft.com.
+* An account that references an organizational account you create in other Azure AD instances—for example, user@domain2.onmicrosoft.com.
+* An account that references a Microsoft account—for example, user@outlook.com.
+
+Within Azure AD, you can configure users with the following roles:
+* Global Administrator.
+* Limited administrator.( Password administrator
+* Service administrator
+* Billing administrator
+* Exchange administrator
+* Skype for Business administrator
+* User administrator
+* SharePoint administrator
+* Compliance administrator
+* Security reader
+* Security administrator
+* Privileged role administrator
+* Intune Service administrator
+* Guest inviter
+* Conditional Access Administrator)
+* User.
+
+Create and manage users in Azure AD
+
+You can create two types of user accounts on the Azure portal:
+* Member users. 
+* Guest users.
+
+There are essentially two ways to create and manage your users:
+* As cloud identities by using only Azure AD.
+* As directory-synchronized identities by using an on-premises directory service to synchronize with Azure AD.
+
+Create and manage groups in Azure AD
+
+You can create four group types in Azure AD:
+* Security.
+* Mail-enabled security. 
+* Distribution. 
+* Office365 groups.
+
+Use Windows PowerShell cmdlets to manage Azure AD objects
+
+To run the Microsoft Azure Active Directory module for Windows PowerShell module, you need the following requirements:
+* Operating system.
+* Microsoft .NET Framework.
+* Microsoft Online Services Sign-in Assistant.
+
+Synchronize objects from AD DS to Azure AD
+
+Azure AD Connect
+* OU
+* Domain
+* User attributes
+* Applications
+
+When directory synchronization is enabled, you have the following authentication options:
+* Separate cloud password.
+* Synchronized password.
+* Pass-through authentication.
+* Federated identities.
+
+When you choose express settings, the following options are selected:
+* SQL Server Express is installed and configured.
+* All identities in the forest are synchronized.
+* All attributes are synchronized.
+* Password synchronization is enabled.
+* An initial synchronization is performed immediately after install.
+* Automatic upgrade is enabled.
+
+You can enable other options during installation when you select custom settings, such as:
+* Pass-through authentication.
+* Federation with AD FS.
+* Select an attribute for matching existing cloud-based users.
+* Filtering based on OUs or attributes.
+* Exchange hybrid.
+* Password, group, or device writeback.
+* After deploying Azure AD Connect, the following occurs:
+   * New user, group, and contact objects in on-premises Active Directory are added to Azure AD; however, no licenses for cloud services, such as Microsoft 365, are automatically assigned to these objects.
+   * Attributes of existing user, group, or contact objects that are modified in on-premises Active Directory are modified in Azure AD; however, not all on-premises Active Directory attributes synchronize with Azure AD.
+   * Existing user, group, and contact objects that are deleted from on-premises Active Directory are deleted from Azure AD.

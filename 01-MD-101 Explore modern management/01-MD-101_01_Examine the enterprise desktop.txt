@@ -1,0 +1,97 @@
+﻿Examine the enterprise desktop
+
+
+The enterprise desktop has evolved and can be a challenging task given the dynamic nature of the IT world today.
+Just a few years ago, an enterprise desktop was typically considered an organization-owned computer or laptop that was either shared or assigned to a specific employee. 
+Today, the enterprise desktop could be a computer, laptop, phone, or tablet. It may be owned by the organization, or it may be owned by an employee who works at an office, from home, or perhaps from a hotel room or a customer site.
+
+
+Examine benefits of modern management
+
+
+The pillars of modern management
+* Easy to deploy and manage.
+* Always up to date.
+* Intelligent security, built-in.
+* Proactive insights.
+
+
+Examine the enterprise desktop lifecycle model
+
+
+Organizations constantly manage the different phases of the enterprise desktop life cycle. These phases include:
+* Planning
+* Purchasing
+* Deployment
+* Operations
+* Support
+* Upgrade and Retire
+
+
+Examine planning and purchasing
+
+
+The Planning stage includes the following:
+* Computer strategy.
+* Computer selection.
+* Deployment methods.
+* Demand forecasting.
+* Design configuration.
+
+
+During the Purchasing stage, there are several decision points that will affect the overall cost of the deployment:
+* Hardware.
+* Software. 
+* Accessories.
+* Deployment processes.
+* Hardware staging.
+
+
+Examine desktop deployment
+
+
+Building 
+The building phase provides the opportunity to improve efficiencies when developing a strategy for a base OS configuration. Its key steps include:
+* Streamlining the deployment process.
+* Developing the deployment process.
+* Testing.
+* Configuration.
+* Managing the logistics. 
+
+
+Deployment
+Enrollment
+
+
+Data Migration
+* Migrate important data to a cloud or non-local solution prior to deployment.
+* Use in-place upgrades when possible.
+* Use the User State Migration tool
+
+
+Plan an application deployment
+
+
+Application deployment planning consists of three phases: managing application inventory and compatibility, packaging applications, and providing life-cycle support.
+* Application inventory and compatibility
+* Application packaging
+* Application life-cycle support (Deploying new applications, Installing new versions of existing applications, Updating applications)
+* Application Delivery
+* Microsoft Store for Business
+* Microsoft Endpoint Manager
+* Virtual Application Delivery
+
+
+Plan for operations and support
+The following factors are essential to continue life-cycle support in the operation phase:
+* Facilities.
+* Computer security.
+* Software updates.
+* Data protection.
+* IT administration.
+
+
+The support phase of the life cycle includes providing training, IT support, and hardware servicing. Consider the following factors when providing these activities:
+* Training.
+* IT support.
+* Servicing hardware.
