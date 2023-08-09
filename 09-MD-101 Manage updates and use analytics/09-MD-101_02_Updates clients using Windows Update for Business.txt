@@ -1,0 +1,99 @@
+Update clients using Windows Update for Business
+
+
+Windows Update for Business enables you to keep your Windows devices up to date by directly connecting your devices to the Windows Update service.
+You can use GPOs or Microsoft Intune to configure the required Windows Update for Business; these settings control how and when your Windows devices are updated.
+
+Explore Windows Update for Business
+
+Windows Update for Business is a new service introduced with Windows. With Windows Update for Business, you can use Group Policy or Intune configuration profiles to configure Windows Update to control the distribution and deployment of Windows updates. Windows Update for Business has the following features:
+* Internal deployment groups. 
+* Maintenance windows.
+* Peer-to-peer delivery.
+* Integrates with existing tools.
+* Support for Semi-Annual Channel. 
+* Test upgrades.
+
+Windows Update for Business provides three types of updates in Windows:
+* Feature Updates.
+* Quality Updates.
+* Non-deferrable updates.
+
+Configure Windows Update for Business
+
+There are a number of steps required to configure Windows Update for Business. The following high-level process describes these steps.
+* Group your devices.(Preview, Targeted, Broad, Critical)
+* Select the appropriate servicing option. (Windows Insider Program, Semi-Annual Channel)
+* Configure when devices receive Feature and Quality Updates.
+* Configure Windows Insider builds.
+
+Use Microsoft Intune to configure Windows Update for Business
+Using Intune, you can configure the following settings:
+* Windows Servicing Channel
+* Deferral settings
+* Pausing
+* Maintenance window
+* Update type
+* Installation behavior
+* Peer downloading
+
+Use GPOs to configure Windows Update for Business
+
+Manage preview builds
+When enabled, you can then select to:
+* Enable preview builds
+* Disable preview builds
+* Disable preview builds once the next release is public
+
+Select when Preview Builds and Feature Updates are received
+If enabled, you can then configure:
+* The Windows readiness level for the updates you want to receive. Choose between Preview Build – Fast, Preview Build – Slow, Release Preview, and Semi-Annual Channel
+* The number of days you’d like to defer receiving a Preview Build or Feature Update after it’s released.
+* The date you’d like a Preview Build or Feature Updates to start.
+
+Select when Quality Updates are received
+If enable, you can then configure:
+* The number of days you’d like to defer receiving a quality update after its release. You can specify a value between 0 and 30 days.
+* The date you’d like Quality Updates to start.
+
+Enable Delivery Optimization for Windows updates
+
+Use Delivery Optimization
+
+Delivery Optimization works in conjunction with Windows Update, Windows Update for Business, and Windows Server Update Services (WSUS). Download packages supported for Delivery Optimization include:
+* Windows updates and drivers
+* Windows Store and Store for Business files
+* Microsoft Defender definition updates
+* Office Click-to-Run updates
+* Win32 apps for Intune
+* Office installations and updates (ver 2004 and later)
+* MSIX apps (HTTP downloads only) (ver 2004 and later)
+
+Branch Cache
+BranchCache is a bandwidth-optimization feature. You can use Branch Cache with WSUS or with Microsoft Endpoint Configuration Manager. Each client has a cache and acts as an alternate source for content that devices on its own network request.
+BranchCache has two operating modes:
+* Distributed Cache mode.
+* Hosted Cache mode.
+
+Evaluate scenarios for using Windows Update for Business
+
+Defer Windows Update updates with other update content hosted on WSUS
+In this scenario, the following objectives apply:
+* Device is configured to defer Windows Quality Updates with Windows Update for Business.
+* Device is managed by WSUS.
+* Device is not configured to enable Microsoft Update.
+* Office and other software apps are on WSUS.
+* Third party drivers are on WSUS.
+
+Exclude drivers from Windows Quality Updates using Windows Update for Business
+In this scenario, the following objectives apply:
+* Device is configured to defer Windows Quality Updates and to exclude drivers from Windows Update Quality Updates.
+* Device is configured to be managed by WSUS.
+* Windows Update drivers are available on WSUS.
+
+Example - Device configured to receive Microsoft updates
+In this scenario, the following objectives apply:
+* Device is configured to defer Quality Updates using Windows Update for Business.
+* Device is managed by WSUS.
+* Device is configured to receive updates for other Microsoft products at the same time as updates to Windows.
+* Microsoft Update, third-party, and locally published update content is available on the WSUS server.

@@ -1,0 +1,82 @@
+Implement dynamic deployment methods
+
+
+Even with the ability to reset the existing Windows image with Autopilot, sometimes even that isn’t necessary, especially with new devices purchased from an OEM.
+A new device typically starts with a fresh install of Windows, and what’s typically needed is the correct edition deployed (such as Windows Enterprise or Education), correct configuration and apps.
+When this is the case, dynamic provisioning can further simplify deployments.
+
+Examine Subscription Activation
+
+There are three main methods for activation:
+* Retail
+* OEM
+* Microsoft Volume Licensing (volume activation)
+
+Current volume activation methods
+
+You can use any or all of the options that are associated with these models, depending on your organization’s needs and network infrastructure, including:
+* Key Management Service (KMS).
+* Multiple Activation Key (MAK).
+* Active Directory-based activation. 
+
+Subscription Activation
+* Enabling Subscription Activation with an existing Enterprise Agreement (EA).
+* Enabling Subscription Activation without an existing EA.
+
+How Subscription Activation works
+* An EA or a Microsoft Products and Services Agreement (MPSA). 
+* An Enterprise E3 subscription via a CSP.
+
+VDA Subscription Activation requirements
+
+To enable Windows Subscription Activation, your VMs must:
+* Run Windows 10 or Windows 11 Pro
+* Be a member of an AD DS domain or Azure AD-joined
+* Be generation 1
+* Be hosted by a Qualified Multitenant Hoster (QMTH), such as Microsoft Azure
+
+Deploy using provisioning packages
+
+You can use a provisioning package to modify a Windows installation and configure many runtime settings without having to reinstall the Windows operating system. For example, you can use a provisioning package to:
+* Configure the Windows user interface.
+* Add additional files or apps.
+* Adjust connectivity settings.
+* Meet mobile network requirements.
+* Manage Certificates.
+* Comply with security policies.
+* Remove installed software.
+* Reset the Windows installation to its initial state.
+
+In a provisioning package, you can configure many settings such as:
+* ComputerAccount
+* Certificates
+* EditionUpgrade
+* Folders
+* Policies
+
+For example, by using the ComputerAccount setting, you can specify:
+* The name for a Windows computer.
+* Which domain the computer is a member of.
+* Which organizational unit (OU) you want to create the computer account in.
+* Which user account you will use to add the computer to the domain.
+
+You can use the EditionUpgrade setting to:
+* Upgrade Windows Pro to Windows Enterprise edition or Windows Education edition.
+* Upgrade Windows Home to Windows Education edition without reinstallation.
+* Change a product key.
+* Perform activation by using the EditionUpgrade setting.
+* Apply runtime settings to a running Windows computer, to an offline Windows image, or during the OS installation.
+
+Use Windows Configuration Designer
+
+Azure AD join with automatic MDM enrollment
+
+Using Azure AD/MDM, you can:
+* Join devices to Azure AD automatically
+* Auto-enroll your users’ devices into MDM services
+* Configure the joined devices by using MDM policies
+
+The requirements for implementing the Azure AD/MDM deployment model are
+* Windows 10/11 Pro or Enterprise edition
+* An instance of Azure AD for identity management
+* An appropriate MDM, such as Microsoft Intune

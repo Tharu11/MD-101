@@ -1,0 +1,84 @@
+Protect identities in Azure AD
+
+
+As the number of different sets of credentials that one should manage increases, password security becomes weaker and weaker. 
+Users often use the same password or very similar passwords for their private email accounts, social networks, and business accounts.
+This results in a scenario, where a security breach of any user’s digital identity can jeopardize all other identities.
+Because of this, it’s recommended that you use additional methods of authentication when authenticating against business resources, as well as to use alternative methods for authentication. 
+In addition, you should use technologies that can monitor user identities and user account behavior and proactively work to protect and prevent attacks.
+
+Explore Windows Hello for Business
+
+On Windows 10 or later clients, Windows Hello for Business replaces passwords with strong two-factor authentication on PCs and mobile devices. This authentication consists of a new type of user credential that is tied to a device and uses biometric authentication or a PIN.
+
+Windows Hello addresses the following problems with passwords:
+* Strong passwords can be difficult to remember, and users often reuse passwords on multiple sites.
+* Server breaches can expose symmetric network credentials (passwords).
+* Passwords are subject to replay attacks.
+* Users can inadvertently expose their passwords due to phishing attacks.
+
+With Windows Hello, users can authenticate to:
+* A Microsoft account
+* An Active Directory account
+* A Microsoft Azure Active Directory (Azure AD) account
+* Identity Provider Services or Relying Party Services that support Fast ID Online (FIDO) v2.0 authentication (in progress)
+
+Biometric sign in
+
+On devices that support Windows Hello, an easy biometric gesture unlocks users’ credentials.
+* Facial recognition.
+* Fingerprint recognition.
+
+Deploy Windows Hello
+
+Deployment models
+There are three deployment models from which you can choose:
+* Cloud only.
+* On-premises.
+* Hybrid.
+
+Manage Windows Hello for Business
+
+Manage Windows Hello for Business with Intune
+You can enable or disable usage of Windows Hello for Business, and also configure the following settings:
+* Minimum PIN length
+* Maximum PIN length
+* Lowercase letters in PIN
+* Uppercase letters in PIN
+* Special characters in PIN
+* PIN expiration (days)
+* Remember PIN history
+* Enable PIN recovery
+* Use a Trusted Platform Module (TPM)
+* Allow biometric authentication
+* Use enhanced anti-spoofing, when available
+* Certificate for on-premises resources
+
+Explore Azure AD identity protection
+
+Azure AD Identity Protection provides you with the ability to:
+* Proactively recognize potential security risks and identify vulnerabilities in your organization.
+* Automatically apply responses and actions when suspicious activity on one or more identities is detected.
+* Properly investigate incidents and take actions to resolve them.
+
+Manage self-service password reset in Azure AD
+The self-service password reset functionality requires that you define alternative methods of authentication for users that have forgotten their passwords. Alternative authentication methods that are supported on Azure AD can be:
+* Office phone
+* Mobile phone
+* Alternative email address
+* Security questions
+
+Implement Azure Active Directory Multi-Factor Authentication
+
+You can implement multi-factor authentication in different ways based on users’ demands and the level of additional security that they need. The following are some ways to implement MFA:
+* ou can use the Microsoft Authenticator mobile app as a software token to provide one-time passwords or to receive push notifications from the application.
+* You can authenticate by using a phone call.
+* You can authenticate by using text messages, which is similar to mobile app authentication, but the push notifications or the codes will come via text messages.
+* You can use third-party OAuth tokens.
+
+Multi-factor authentication comes as part of the following offerings:
+* Azure Active Directory Premium licenses
+* Multi-factor authentication for Microsoft 365
+* Azure Active Directory Global Administrators
+* Azure AD Premium or Enterprise Mobility + Security licenses
+* setting up MFA

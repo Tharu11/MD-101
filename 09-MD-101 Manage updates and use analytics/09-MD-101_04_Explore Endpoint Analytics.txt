@@ -1,0 +1,76 @@
+Explore Endpoint Analytics
+
+
+Sometimes there are issues that affect user productivity less visible or historically difficult to pinpoint. 
+Help desk tickets containing a title along the lines of "User reports device seems slow" are as old as the computer itself.
+What's worse is users might come to accept a device's poor performance, ignoring a real issue that ultimately reduces productivity. 
+When this issue is reported, it can often be labor-intensive trying to identify to root cause.
+
+Enroll devices in Endpoint Analytics
+
+It's not uncommon for end users to experience long boot times or other disruptions. These disruptions can be due to a combination of:
+* Legacy hardware
+* Software configurations that aren't optimized for the end-user experience
+* Issues caused by configuration changes and updates
+
+Requirements 
+
+To enroll devices via Intune requires:
+* Intune enrolled or co-managed devices
+* Windows devices must be Azure AD joined or hybrid Azure AD joined. Workplace joined or Azure AD registered devices aren't supported.
+* Network connectivity from devices to the Microsoft public cloud.
+* The Intune Service Administrator role is required to start gathering data.
+
+To enroll devices via Configuration Manager requires:
+* A minimum of Configuration Manager version 2002 with KB4560496 or later
+* The Configuration Manager clients upgraded to version 2002 (including KB4560496) or later
+* Microsoft Endpoint Manager tenant attach enabled.
+* Enable Endpoint analytics for devices uploaded to Microsoft Endpoint Manager.
+
+Endpoint Analytics compared to Desktop Analytics
+Endpoint Analytics is a different solution than Desktop Analytics. They are similar in concept, and some metrics do overlap. However, the main differences between these two products include:
+* Desktop Analytics focuses on assessing compatibility. Endpoint Analytics focuses more on the health of the device and user experience.
+* Desktop Analytics requires Endpoint Configuration Manager, where Endpoint Analytics does not.
+* Desktop Analytics only integrates with Configuration Manager. Endpoint Analytics supports clients that are enrolled in either Configuration Manager or Intune.
+
+Monitor startup performance and restarts
+
+The Startup score is a number between 0 and 100, and these scores are averaged to provide an overall tenant boot score. This score is a weighted average of Boot score and the Sign-in score, which are computed as follows:
+* Boot score.
+* Sign-in score.
+
+Insights
+The Startup performance page has reporting tabs that provide support for the insights, including:
+* Model performance.
+* Device performance.
+* Startup processes.
+
+Restart frequency
+* Abnormal shutdowns.
+* Normal shutdowns.
+
+Monitor application reliability
+
+App reliability score
+
+Each application on the App performance tab is assigned an App reliability score based on:
+* Crash frequency.
+* Total usage duration.
+
+App performance
+
+For each application in the report, the following data is provided:
+* App name.
+* App display name.
+* App publisher.
+* Active devices (14 days).
+* Total usage duration (14 days).
+* Total crashes (14 days).
+* Mean time to failure.
+* App reliability score.
+
+App performance details
+
+Selecting an app name in the table from App performance opens App performance details. App performance details contain two tabs:
+* App versions.
+* OS versions.

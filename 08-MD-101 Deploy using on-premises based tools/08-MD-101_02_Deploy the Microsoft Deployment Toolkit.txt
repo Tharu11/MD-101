@@ -1,0 +1,53 @@
+Deploy using the Microsoft Deployment Toolkit
+
+
+There are several on-premises methods that have been traditionally used to facilitate OS deployments within organizations.
+While newer cloud-based solutions have frequently simplified many methods and processes, on-premises tools still have a place in modern management.
+In this module, we’ll discuss these shifts from traditional to modern management, and where on-premises solutions best fit in today’s enterprise.
+
+Set up the Microsoft Deployment Toolkit for client deployment
+
+MDT setup prerequisites
+
+To enable a successful Windows deployment, you must plan and assemble the MDT infrastructure prior to the delivery of the operating system.
+Some of the key elements of the architecture of an MDT delivery include:
+* Active Directory Domain Services Environment.
+* Windows 2016 or later server.
+* Windows ADK.
+* Windows Deployment Services (optional).
+* Windows Server Update Services (optional). 
+
+Exploring MDT
+* Windows 10 or later client support.
+* Windows Server 2016 and later support.
+* The ability to automate a sequential set of tasks into a single repeatable deliverable, that can be then replicated onto many devices. This can include the installation of an operating system, line-of-business applications, language packs, scripts, and more.
+* Deployment of a user empowering interface that enables end users to customize their Windows OS installation.
+* Displays the status of currently running deployments.
+* Offline BitLocker, which saves hours of encryption time by having BitLocker enabled during the Windows Preinstallation Environment (Windows PE) phase.
+* Support for running the User State Migration Tool (USMT) capture offline, during the Windows PE phase of the deployment.
+* Granular customization that enables the IT Admin to deliver an OSE tailored to the organization’s needs.
+
+Exploring the components of MDT
+
+The key components of Deployment Workbench include:
+* Operating system (OS images). 
+* Applications.
+* Drivers.
+* Packages.
+* Task Sequences.
+
+Manage and deploy images using the Microsoft Deployment Toolkit
+
+Deploy a reference image with a task sequence
+Some of the key steps in the development task sequence and their role in delivering an automated delivery of Windows include:
+* Gather. 
+* Format and Partition Disk.
+* Apply OS Image. 
+* Inject Drivers.
+* Install Applications.
+
+Methods of installation
+The following provides a brief overview and comparison between traditional and modern methods:
+* In traditional deployments, lite-touch installations (LTI) are automated deployments that require some user intervention, such as a user must be present at the computer to initiate an installation, which then continues automatically.
+* In zero-touch installations (ZTI), the deployment is completely automated without any user intervention and can be initiated without user intervention.
+* With user-driven installations (UDI), the user can interact during the deployment, giving them certain choices for configuration.

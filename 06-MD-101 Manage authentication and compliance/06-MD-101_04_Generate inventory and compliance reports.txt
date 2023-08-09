@@ -1,0 +1,89 @@
+Generate inventory and compliance reports
+
+
+Microsoft Endpoint Manager provides several different options for creating and viewing reports.
+Both Endpoint Configuration Manager and Intune provide out-of-the-box reports. 
+You can also create custom reports by leveraging services such as the Intune Data Warehouse and tools such as Power BI.
+
+Report enrolled devices inventory in Intune
+
+Device reporting
+To create and download a report for devices, in the Endpoint Manager admin center, do the following:
+* Select Devices and then select All devices.
+* In the All devices view, select the Columns option. Select (or deselect) any fields you wish to include in the report. Select Apply.
+* Select the Filter option. Select any additional criteria you wish to set as a filter (such as OS, ownership, etc.) in the report. Select Apply.
+* In the All devices view, select Export.
+* Select Yes. A report containing all your devices with hardware inventory will be generated and downloaded to your computer, as a zipped, comma-separated value (.csv) file.
+* You can now view or modify the report in Excel.
+
+Application reporting
+To create and download a report for apps, in the Endpoint Manager admin center, do the following:
+* Select Apps and then select All apps.
+* In the All apps view, select the Columns option. Select (or deselect) any fields you wish to include in the report. Select Apply.
+* Select the Filter option. Select any additional criteria you wish to set as a filter (such as platform, assignment, app type) in the report. Select Apply.
+* In the All apps view, select Export.
+* Select Yes. A report will be generated and downloaded to your computer, as a zipped, comma-separated value (.csv) file.
+* You can now view or modify the report in Excel.
+
+Monitor and report device compliance
+
+Device compliance summary report
+Use the following steps to view the Device Compliance Summary report:
+* Sign in to the Microsoft Endpoint Manager admin center.
+* Select Reports > Device Compliance to view the reports summary.
+
+Device compliance report
+These records can be sorted and searched upon to focus on the information you need.
+* Sign in to the Microsoft Endpoint Manager admin center.
+* Select Reports > Device compliance.
+* In the details pane, select the Reports tab, then select the Device compliance option.
+* Select the Compliance status, OS, and Ownership filters to refine your report.
+* Select Generate report (or Generate again) to retrieve current data.
+
+You can view the Trends report using the following steps:
+* Sign in to the Microsoft Endpoint Manager admin center.
+* Select Reports > Device compliance.
+* In the details pane, select the Reports tab, then select the Device compliance trends option.
+
+Build custom Intune inventory reports
+
+You can use the Intune Data Warehouse to build professional looking reports that provide insight into your enterprise mobile environment. For example, some of the reports include:
+* Trend of users enrolling in Intune so you can optimize your license purchases
+* App and OS versions break down so you can review that status of devices
+* Enrollment and device compliance trends so you can smoothly roll out policy updates
+
+The Data Warehouse provides you access to more information about your Intune environment than the Endpoint Manager portal. With the Intune Data Warehouse you can access:
+* Historical Intune data
+* Data refreshed on a daily cadence
+* A data model using the OData standard
+
+Requirements for accessing the Intune Data Warehouse (including the API) are
+* User must be one of:
+   * Azure AD global administrator
+   * An Intune service administrator
+   * User with role-based access to Intune data warehouse resources
+   * User-less authentication using application-only authentication
+* Install the latest version of Power BI Desktop. You can download Power BI Desktop from: PowerBI.microsoft.com
+
+When accessing data in the Data Warehouse with Power BI, you have two options:
+* Load the data in Power BI using the OData link
+* Use the Intune Compliance App
+
+Use the Power BI App
+Alternatively, you can use the Power BI Intune Compliance app, which is in preview. This contains pre-configured reports focused on device compliance reporting. This uses the web version of Power BI and allows for customization and sharing of reports.
+* Sign in to the Endpoint Manager portal and choose Reports.
+* Select Get Power BI App, then Get it now.
+* Install the App. You will either need to sign in with a user licensed for Power BI or sign up for a trial.
+* Once in the app, note a message that sample data is being shown. Connect your data by signing in.
+* When the data has refreshed (this can take up to 5 minutes), select the Intune Compliance workspace to view the dashboards and reports.
+
+Access Intune using Microsoft Graph API
+
+Here’s an example of how you can determine whether an application is installed on a user's device:
+
+1. From Azure AD, get a list of devices registered to a user:
+https://graph.microsoft.com/beta/users/{user}/ownedDevices
+2. Then view the list of applications for your tenant:
+https://graph.microsoft.com/beta/deviceAppManagement/mobileApps
+3. Take the ID from the application and determine the installation state for the application (and therefore user):
+https://graph.microsoft.com/beta/deviceAppManagement/mobileApps/{id}/deviceStatuses/

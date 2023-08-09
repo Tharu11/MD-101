@@ -1,0 +1,54 @@
+Update Windows client
+
+
+To keep computers that run Windows stable and protected, you must update them regularly with the latest features, security updates, and fixes.
+Windows Update enables you to download and install important and recommended updates automatically.
+To utilize Windows Update effectively, you must be aware of the configuration options that Windows Update has available, and you must guide users on how to configure these options.
+
+Compare Windows client servicing options and channels
+
+With Windows as a service, Microsoft simplifies the operating system deployment process. Microsoft now releases improvements and even new versions of Windows through the same technology used to deliver regular updates. Updates are now delivered as follows:
+* Quality updates. 
+* Feature updates.
+
+In addition to feature and quality updates, Windows update continues to provide the following update types:
+* Driver updates. 
+* Microsoft product updates.
+
+Servicing channels
+
+You can assign devices to the following servicing channels:
+* Windows Insider Program.
+* General Availability Channel.
+* Long-Term Servicing Channel.
+
+Examine Windows Update settings in Windows client
+
+Most updates occur seamlessly, with the following exceptions:
+* If an update requires a restart to complete installation, you can schedule the restart for a specific time.
+* When a software update is applied to an application that is in use, Windows can save the application’s data, then close, update, and restart the application. Windows might prompt the user to accept Microsoft Software License Terms when the application restarts.
+* When you configure Windows Update, consider the following:
+   * Use WSUS in a corporate environment.
+   * Use Configuration Manager for larger environments that have more than 100 computers.
+
+Windows Update settings in Windows
+
+From the Update Status section, you can configure the following settings:
+* Check for updates.
+* View installed update history.
+
+From the Update settings section, you can configure the following settings:
+* Change active hours.
+* Restart options.
+* Advanced options.
+ - Give me updates for other Microsoft products when I update Windows.
+- Choose when updates are installed. 
+- Pause Updates.
+- Delivery Optimization.
+
+Explore Windows Insider for Business
+
+Windows Insider for Business extends this to help business plan for forthcoming updates and offers the following benefits:
+* Explore and test new security, management and productivity features.
+* Install and test Insider Preview builds on one or many devices in your organization.
+* Use Preview Builds to test apps before feature updates are released.

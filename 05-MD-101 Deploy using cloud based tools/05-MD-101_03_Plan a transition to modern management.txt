@@ -1,0 +1,106 @@
+Plan a transition to modern management
+
+
+You can prepare, deploy, and manage a device provisioned from Windows Autopilot, and maximize investment in Configuration Manager through co-management to begin the modern journey.
+This module will explore considerations and review the planning of this transition, focusing on two paths: migration and newly provisioned devices.
+
+Examine prerequisites for co-management
+
+To enable co-management for your on-premises Active Directory devices, you must configure your devices as hybrid Azure AD joined devices.
+
+Before you start enabling hybrid Azure AD joined devices in your organization, you need to make sure that:
+* You are running an up-to-date version of Azure AD connect. Azure AD Connect provides you with a wizard to configure hybrid Azure AD join. Azure AD Connect has synchronized the computer objects of the devices you want to be hybrid Azure AD joined to Azure AD. If the computer objects belong to specific organizational units (OUs), then these OUs need to be configured for synchronization in Azure AD Connect as well.
+* Intune MDM must be set up and configured for automatic enrollment.
+* Microsoft Endpoint Manager is installed.
+* Active Directory joined devices are using Windows 10 version 1709 or later. We recommended that you always use the latest version of Windows so that you get the newest advances in terms of security, Azure AD, and Intune features.
+* Azure AD automatic enrollment is enabled.
+
+You can control the device registration behavior of your devices by deploying the following GPO: Register domain-joined computers as devices.
+* In the Group Policy Management Console, create two new GPOs and then go to Computer Configuration > Policies > Administrative Templates > Windows Components > Device Registration.
+* In the first GPO, apply the Disabled setting to prevent automatic device registration. In the second GPO, apply the Enabled setting to enable automatic device registration
+* Link the first GPO to all devices in your environment and then link the second GPO only to the OU containing your pilot devices. Alternatively, you can use Group Policy security filtering and a security group to control which devices can automatically register with Azure AD.
+
+After you have joined your on-premises Active Directory devices to Azure AD, you can immediately use the following Intune remote actions:
+* Factory reset
+* Selective wipe
+* Delete devices
+* Restart device
+* Fresh start
+
+Transition workloads to Intune
+
+The following list features some of the workloads that you can transition to Intune:
+* Resource access policies
+* Windows Update policies
+* Endpoint Protection
+* Device Configuration
+* Microsoft 365 Select-to-Run apps
+
+Evaluate modern management consideration
+
+Modern deployment can change an installed Windows 10 or Windows 11 operating system in many ways, such as:
+* Removing pre-installed software.
+* Upgrading a Windows 10 or Windows 11 edition.
+* Joining a Windows 10 or Windows 11 device to AD DS or Microsoft Azure Active Directory (Azure AD).
+* Enrolling a Windows 10 or Windows 11 device in a mobile device management (MDM) solution, such as 
+
+Configuration Manager or Intune, which performs a final and more advanced customization.
+* Restricting the Administrator account creation.
+* Creating and auto-assigning devices to configuration groups based on a device's profile.
+* Customizing OOBE content specific to the organization.
+
+Image with Modern Methods
+
+Some of the more common day-to-day scenarios that are likely to require organizations to consider using imaging with modern management include:
+* A device experiences a BSOD and can't boot into Windows at all, resulting in the need for a bare-metal build.
+* When you deliver a series of complex applications and dependencies onto a device, which is then co-managed.
+* There's a hardware failure of a device that requires network connectivity to install applications or join a corporate Active Directory domain.
+
+Evaluate upgrades and migrations in modern transitioning
+
+The key difference is consideration for the end user's data and configuration. The process must include a way to safely and securely ensure that user data and settings aren't lost during the process.
+
+Scenarios for migrating users can include:
+* The user's device is being replaced.
+* The user's existing device is being upgraded from an older OS to Windows 10 or Windows 11 and an in-place upgrade isn't possible (such as an unsupported upgrade path).
+* A clean installation is needed. You may want to do this if the current state of the PC is undesirable. For example, the PC has performance or stability issues unrelated to hardware or the device hasn't been ideally maintained (it has legacy or unapproved apps installed, non-standard configuration, etc.)
+
+Migrate data when modern transitioning
+
+Synchronize the user state
+
+Enterprise State Roaming also offers:
+* Separation of corporate and consumer data.
+* Enhanced security.
+* Better management and monitoring.
+
+Migrate the user state
+* Capture settings.
+* Restore captured settings.
+
+User state migration in the replace and refresh computer scenario
+* In the replace scenario, the source and destination computers are different.
+* In the refresh scenario, the source and destination computers are the same.
+
+Known Folder Move to facilitate a modern file management solution
+
+There are some considerations to consider when choosing to use Known Folder Move:
+* You can’t use KFM if you're using Windows Folder Redirection for Desktop, Pictures, or Documents folders.
+* Consider configuring the sync client upload rate GPO if you have a large organization or expect KFM to result in a large amount of data being migrated. Also consider a pilot group to assess potential impact to network traffic.
+* KFM will return errors if unsupported conditions are found. These can include unsupported file types (such as Outlook or OneNote files), exceeding maximum path length and known folders not in the default locations.
+USMT templates used for migration
+USMT templates consist of four .xml templates that control data which is collected. These files are:
+* MigApp.xml
+* MigDocs.xml
+* MigUser.xml
+* ConfigMgr.xml
+
+Migrate workloads when modern transitioning
+
+Migrate client management to Intune
+Smaller organizations should consider moving to 100% cloud-based management if:
+* The OS configuration capabilities provided by Autopilot meet deployment needs.
+* Applications are modern and relatively simple installs.
+* There isn't an excessive number of existing legacy applications.
+* The existing configuration management deployment is relatively simple.
+* Server management requirements can be accomplished with other tools such as Windows Admin Center.

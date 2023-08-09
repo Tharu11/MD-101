@@ -1,0 +1,74 @@
+Deploy using Endpoint Configuration Manager
+
+
+Both the Microsoft Deployment Toolkit (MDT) and Configuration Manager use a similar interface for an OS deployment. 
+However, the MDT is primarily a solution for operating system deployment.
+Configuration Manager is a much more robust solution for client management. 
+This module explains the common day to day tasks that Administrators would use Configuration Manager to perform.
+
+Explore client deployment using Configuration Manager
+
+The following Microsoft management solutions are all now part of Microsoft Endpoint Manager:
+* Configuration Manager
+* Microsoft Intune
+* Desktop Analytics
+* Windows Autopilot
+* Other features in the Device Management Admin console
+
+The foundations of MDT
+Some options and methods were more readily available in MDT than they were in Configuration Manager, including:
+* Some of the key benefits of combining the tools include:
+* Access to a wider expanse of task sequence variables with which to utilize during OS deployment.
+* MDT Rules engine offers a raft of in-built options to aid OS deployment.
+* The ability to install Windows features without the knowledge of code.
+* Log file collection out of a template task sequence wizard.
+
+Configuration Manager overview
+
+Some of the key elements that Configuration Manager Current Branch offers (as of CB2010) include:
+* OS Deployment
+* Application Management
+* Update Management
+* Servicing Management
+* Device Inventory (CMDB)
+* Basic License Tracking
+* Self Service Software Catalog
+* Cloud Management capability
+* Real Time query and reporting
+* Enterprise Scalability
+* Azure AD Integration
+* Proactive cadence adoption through Desktop Analytics
+* Remote Control
+* User Settings Capture and Restore
+
+Manage client deployment using Configuration Manager
+
+Task Sequences
+Some of the scenarios for using a task sequence include:
+* Deploying an operating system to a new or rebuilt device.
+* Deploying a Windows upgrade.
+* Capturing an operating system image for use in a deployment sequence.
+* Capturing and restoring user state settings.
+* Customizing a task sequence to carry out more advanced configurations.
+
+Log Files
+Some examples include the following:
+* Ccmsetup.log.
+* SMSTS.log.
+* AppEnforce.log. 
+* Execmgr.log.
+
+Plan in-place upgrades using Configuration Manager
+
+Considerations for In-place Upgrades
+The following considerations might be critical in determining whether you can perform an in-place upgrade:
+* The operating system and edition that can be upgraded to Windows.
+* Sufficient hardware resources.
+* Windows 10 or Windows 11–compatible hardware and apps.
+
+Running Setup.exe creates several XML files that you can open and inspect for issues.
+* 32-bit OS. 
+* OS language. 
+* Dual boot/multiboot.
+* Windows To Go/VHD. 
+* Standard image only.

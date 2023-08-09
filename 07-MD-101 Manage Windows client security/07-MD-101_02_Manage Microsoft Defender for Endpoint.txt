@@ -1,0 +1,99 @@
+Manage Microsoft Defender for Endpoint
+
+
+Microsoft Defender for Endpoint (formerly Windows Defender Advanced Threat Protection) is an additional cloud-based online service that assists organizations in detecting, investigating, and responding to advanced persistent threats.
+Windows Defender Advanced Threat Protection provides behavior-based advanced attack detection, a forensic timeline, and a unique threat intelligence knowledge base.
+
+Explore Microsoft Defender for Endpoint
+
+Microsoft Defender for Endpoint uses the following combination of technologies built into Windows and Microsoft's cloud service:
+* Endpoint behavioral sensors.
+* Cloud security analytics.
+* Threat intelligence.
+
+You can use Microsoft 365 Security Center to:
+* View, sort, and triage alerts from your endpoints.
+* Search for more information on observed indicators such as files and IP addresses.
+* Change Microsoft Defender for Endpoint settings, including time zone and review licensing information.
+
+Examine key capabilities of Microsoft Defender for Endpoint
+
+Attack surface reduction
+Attack surface reduction capabilities in Microsoft Defender for Endpoint help protect the devices and applications in your organization from new and emerging threats.
+* Hardware-based isolation.
+* Application control.
+* Exploit protection.
+* Network protection.
+* Controlled folder access.
+* Attack surface reduction.
+* Network firewall
+
+Next generation protection
+
+Microsoft Defender Antivirus includes:
+* Cloud-delivered protection for near-instant detection and blocking of new and emerging threats. Along with machine learning and the Intelligent Security Graph, cloud-delivered protection is part of the next-gen technologies that power Microsoft Defender Antivirus.
+* Always-on scanning, using advanced file and process behavior monitoring and other heuristics (also known as "real-time protection").
+* Dedicated protection updates based on machine-learning, human and automated big-data analysis, and in-depth threat resistance research.
+
+Secure score
+
+This feature is available for machines on Windows 10, version 1703 or later.
+The Secure score dashboard displays a snapshot of:
+* Microsoft secure score
+* Secure score over time
+* Top recommendations
+* Improvement opportunities
+
+Advanced hunting
+With advanced hunting, you can:
+* Use query language with IntelliSense.
+* Query the stored telemetry.
+* Use links to the portal.
+* Use query examples.
+
+Management and APIs
+Microsoft Defender for Endpoint provides fine-grained control over what users with access to the portal can see and do through the flexibility of role-based access control (RBAC). The RBAC model supports a wide variety of security team structures:
+* Globally distributed organizations and security teams
+* Tiered model security operations teams
+* Fully segregated divisions with single centralized global security operations teams
+
+Explore Microsoft Defender Application Guard
+
+Types of devices that should use Application Guard
+Application Guard has been created to target several types of systems:
+* Enterprise desktops.
+* Enterprise mobile laptops.
+* Bring your own device (BYOD) mobile laptops.
+* Personal devices.
+
+Configuring Application Guard
+
+To enable Application Guard in Microsoft Edge, use the following steps:
+* Open Control Panel.
+* Select on Programs.
+* Select the Turn Windows features on or off link.
+* Check the Microsoft Defender Application Guard option. If that option is not available to select, it is probably because your hardware doesn't support this feature.
+* Select OK.
+* Select Restart now.
+
+Examine Windows Defender Exploit Guard
+
+Microsoft Defender Exploit Guard features
+There are four features in Microsoft Defender Exploit Guard:
+* Exploit protection.
+* Attack surface reduction rules.
+* Network protection. 
+* Controlled folder access.
+
+Additional capabilities
+* You can enable audit mode for the features, which provides you with basic event logs that indicate how the feature would have responded if it had been fully enabled. This can be useful when evaluating the impact of Microsoft Defender EG and to help determine the impact of the features on your network's security.
+* You can also visit the Microsoft Defender Testground website at https://demo.wd.microsoft.com to confirm the features are working and test how each of them works.
+* You can manage and report on Microsoft Defender EG in the Windows Security app as part of the Microsoft Defender for Endpoint suite of threat mitigation, preventing, protection, and analysis technologies.
+* You can use the Windows Security app to obtain detailed reporting into events and blocks as part of the usual alert investigation scenarios.
+
+Explore Windows Defender System guard
+
+Windows Defender System Guard reorganizes the existing Windows system integrity features in one system and sets up the next set of investments in Windows security. It's designed to:
+* Help protect and maintain the integrity of the system as it starts up
+* Help protect and maintain the integrity of the system after it's running
+* Help ensure that system integrity has truly been maintained through local and remote attestation

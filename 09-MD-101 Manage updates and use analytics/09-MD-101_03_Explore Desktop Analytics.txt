@@ -1,0 +1,129 @@
+Explore Desktop Analytics
+
+
+Desktop Analytics is a cloud-based service that integrates with Configuration Manager.
+It provides a number of solutions that provide useful information about the state of deployed devices in your organization and provides guidance for planning pilot and production deployments.
+
+Explore Desktop Analytics
+
+Use Desktop Analytics with Configuration Manager to:
+* Create an inventory of devices and apps running in your organization.
+* Assess app compatibility with the latest Windows feature updates.
+* Identify compatibility issues, and receive mitigation suggestions based on cloud-enabled data insights.
+* Create pilot groups that represent the entire application and driver estate across a minimal set of devices.
+* Deploy Windows to pilot and production-managed devices.
+
+Configure Desktop Analytics
+
+Desktop Analytics requires the following:
+* An active Windows Azure subscription
+* Configuration Manager, version 1902 with update rollup (4500571) or later.
+* Devices running Windows 8.1 or later
+* Devices also need to have the Configuration Manager client, version 1902 with update rollup (4500571) or later
+* Network Connectivity to the Microsoft public cloud
+* Devices must be licensed user of either Windows Enterprise (E3 or E5), Windows VDA (E3/E5) or Windows Education (A3/A5)
+* Windows diagnostic data must be enabled on clients.
+
+Configure Desktop Analytics
+
+The following describes high-level steps for setting up Desktop Analytics:
+* Start the onboarding wizard.
+* Give users access.
+* Set up your workspace.
+* Confirm your settings,
+
+Explore compatibility assessment
+Desktop Analytics uses the following compatibility assessment categories:
+* Low:
+* Medium
+* High
+* Unknown
+
+There are several sources that Desktop Analytics uses to generate the assessment rating for applications:
+* Microsoft known issues
+* Ready for Windows catalog
+* Advanced insights
+
+Microsoft known issues
+
+Desktop Analytics looks at the Microsoft app compatibility database for any known issues. It uses this database to determine any existing compatibility blocks for publicly available applications from Microsoft or other publishers. This check only applies to the target OS for the deployment plan you select.
+* Application is removed during upgrade.
+* Blocking upgrade.
+* Blocking upgrade, but can be reinstalled after upgrading.
+* Blocking upgrade, update application to newest version.
+* Disk encryption blocking upgrade
+* Does not work with new OS, but won't block upgrade
+* Does not work with new OS, and will block upgrade
+* Evaluate application on new OS
+* May block upgrade, test application
+* Multiple
+* Reinstall application after upgrading
+
+Ready for Windows catalog
+
+The possible categories are:
+* Highly adopted
+* Adopted.
+* Insufficient data
+* Contact developer
+* Unknown
+
+Advanced insights
+
+Desktop Analytics can also detect issues using the following additional insights:
+* Adopted version available.
+* Driver dependency. 
+* Configuration Manager 1906 Additional insights.
+
+Monitor health status
+
+Desktop Analytics monitors the following health status factors for apps:
+* % Devices with crashes.
+- After update.
+- Before update.
+- Commercial avg.
+- % Sessions with crashes.
+
+Monitor Health also provides additional information such as:
+* Other versions.
+* Top issues.
+* Recent crashes.
+
+Monitor updates
+
+Security updates are categorized into:
+* Devices running the latest version
+* Devices running latest version –1
+* Devices running updates older than latest -1
+Likewise, for feature updates, devices are categorized as:
+* In-Service: running the latest feature update
+* Near end of service: running a feature update within 90 days of end of service
+* End of service: Devices running feature updates that are past end of service date.
+
+Prepare deployment plans
+
+Desktop Analytics collects and analyzes device, application, and driver data in your organization. Based on this analysis and your input, you can use the service to create deployment plans for Windows. Deployment plans have the following features:
+* Automatically recommend which devices to include in pilots
+* Identify compatibility issues and suggest mitigations
+* Assess the health of the deployment before, during, and after updates
+* Track the progress of your deployment
+
+As part of your deployment plan, you do the following actions:
+* Define what versions of Windows you want to deploy
+* Choose what groups of devices to which you want to deploy
+* Create readiness rules for the deployment
+* Define the importance of your apps
+* Choose pilot devices based on automatic recommendations
+* Decide how to fix issues with apps based on recommendations from Desktop Analytics
+
+Readiness rules
+
+The following readiness rules are available in deployment plans:
+* Whether your devices automatically receive drivers from Windows Update. If devices receive the driver updates from Windows Update, then any driver issues identified as part of readiness assessment are automatically marked as Ready.
+* Low install count threshold for your Windows apps. If an app is installed more than 2%, the deployment plan marks the app as Noteworthy.
+Plan assets
+
+While the Assets area also shows devices and apps, the Plan assets area under a specific deployment plan includes additional information.
+* Devices.
+* Apps.
+* Drivers.

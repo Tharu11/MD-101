@@ -1,0 +1,62 @@
+Manage Cloud PCs and Virtual Desktops
+
+
+Virtual Desktops, as opposed to physical desktops, are becoming more popular for solving challenges related to providing remote access to resources.
+Microsoft provides solutions such as Azure Virtual Desktop and Windows 365.
+An Azure Administrator typically configures Azure Virtual Desktops (AVD).
+Windows 365 Cloud PC, while built on the same fundamentals as AVD, can be set up and configured without Azure Administrator experience.
+In either case, both platforms can be managed using the same methods as physical desktops.
+
+Examine Windows Virtual Desktop
+
+Azure Virtual Desktop client to connect to their published Windows desktop and applications. This client could either be a native application on the device or the Azure Virtual Desktop HTML5 web client. Organizations should consider Azure Virtual Desktop when they want to:
+* Provide the best user experience
+* Enhance security
+* Simplify management
+* Manage performance
+
+Explore Windows 365
+
+Windows 365 is available in two editions:
+* Windows 365 Business
+* Windows 365 Enterprise
+
+Configure Windows 365
+
+Assign licenses to users
+To assign licenses using the Azure AD admin center, perform the following.
+* Sign in to the Azure AD admin center with a license administrator account.
+* Select Licenses to open a page where you can see and manage all licensable products in the organization.
+* Select a user or group, and then use the Select button at the bottom of the page to confirm your selection.
+* Under All products, select Windows 365. Select Assign at the top of the page.
+* On the Assign license page, select Users and groups to open a list of users and groups.
+* Select Assign at the bottom of the page.
+
+Configure a custom device image (Optional)
+
+Windows 365 provides a built-in gallery of Windows Enterprise images accessible through the provisioning policy creation flow. These images are updated monthly with the latest security updates so that end users have a secure and seamless experience.
+* Images with pre-installed Microsoft 365 Apps: Microsoft 365 Apps and Teams optimizations are already installed.
+* Images with OS optimizations: These are Windows Enterprise images optimized for improved performance on virtualized environments and on lower end hardware configurations.
+
+Manage Windows 365
+
+Remote actions
+Most of the same remote actions available on physical devices, are available for Cloud PCs as well. They include:
+* Restart
+* Sync
+* Rename
+* Quick Scan
+* Full Scan
+* Update Windows Defender
+
+There are three remote actions that are unique to Cloud PCs and will be available if a Cloud PC is selected.
+* Reprovisioning
+* Resize
+* Collect diagnostics
+
+Resize a Cloud PC
+
+To resize a Cloud PC, the following are required:
+* The admin must have either Global Admin or the Intune Service Admin Azure AD role
+* The Cloud PC must have a status of provisioned.
+* The user must be signed out with all work saved as resizing disconnects their session

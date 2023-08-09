@@ -1,0 +1,73 @@
+Implement device data protection
+
+
+Windows Information Protection (WIP) is a set of technologies that protect your organization from accidental or malicious data leaks, without significant changes to your enterprise environment or apps.
+It provides this protection to both enterprise-owned devices and BYOD devices, and it does so without interfering with employees’ regular workflows.
+In a modern work environment, with the growth in the number of mobile devices and personal devices, this protection is needed more than ever.
+One of the key tasks for modern desktop administrator is to manage data protection on all types of devices.
+This module describes how you can use Intune to create and manage WIP policies that manage this protection.
+
+Explore Windows Information Protection
+
+Data loss prevention
+Organizations use data loss prevention (DLP) systems to overcome the limitations of systems that are based on authentication and authorization. A DLP system automatically detects and controls data that should be protected and provides a way to protect data despite the location. A DLP system requires:
+* Rules that identify and categorize data that needs protection.
+* Software applications such as Microsoft Exchange or Microsoft SharePoint to scan data to see if it matches rules.
+* A way to define what actions applications must carry out when they find data that matches a rule.
+
+Plan Windows Information Protection
+
+In addition to addressing the deficiencies of DLP and IRM systems, WIP allows you to think about data management in new ways. Because of this, it’s very important to plan for WIP usage in your organization.
+
+WIP helps you to overcome several common challenges by providing:
+* Separation between personal and corporate data. 
+* Additional protection to LOB apps. 
+* Ability to perform a selective wipe.
+* Audit reporting.
+* Management system integration. 
+* Encrypt data on a device.
+* Control which apps can access corporate data.
+* Enlighted apps allow users to work with both personal and corporate data. 
+* Prevent use of personal apps and services.
+* Remove corporate data from lost or stolen devices, or devices owned by ex-employees.
+
+Implement and use Windows Information Protection
+
+Optional WIP-related settings
+
+You can also configure these additional WIP policy settings:
+* Revoke encryption keys on unenroll.
+* Show the Windows Information Protection icon overlay. 
+* Use Azure RMS for WIP.
+* Use Windows Hello for Business as a method for signing into Windows. 
+
+Explore Encrypting File System in Windows client
+
+Manage EFS certificates
+
+EFS uses public key cryptography to encrypt files. EFS obtains the keys from a user’s EFS certificate, which also might contain private key information. Therefore, you must manage them correctly.
+Users need asymmetric key pairs to encrypt data, and they can obtain these keys:
+* From a certification authority (CA). 
+* By generating them.
+
+EFS features in Windows 10
+
+Additionally, be aware of the following features when implementing EFS on Windows:
+* Support for storing private keys on smart cards. 
+* The Encrypting File System Rekeying Wizard.
+* Group Policy settings for EFS. 
+* Per-user encryption of Offline Files.
+* Selective Wipe.
+
+Explore BitLocker
+
+BitLocker performs two functions that provide offline data protection and system-integrity verification:
+* It encrypts all data that is stored on a Windows operating system volume and configured data volumes.
+* It is configured, by default, to use a Trusted Platform Module (TPM) chip
+
+System integrity verification
+
+BitLocker uses a TPM to verify the integrity of the startup process by:
+* Providing a method to check that early boot-file integrity has been maintained
+* Enhancing protection to mitigate offline software-based attacks
+* Locking the system when it detects tampering

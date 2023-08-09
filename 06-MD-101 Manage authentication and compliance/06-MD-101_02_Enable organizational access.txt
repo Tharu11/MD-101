@@ -1,0 +1,36 @@
+Enable organizational access
+
+
+As discussed previously, the need for the ability to work remotely and access organizational resources is becoming commonplace today.
+While tools like OneDrive help with managing user files and solutions like SharePoint online facilitate access to resources in the cloud, some resources can only be accessed while on the corporate network. 
+In these scenarios, a virtual private network (VPN) connection must be established.
+
+Enable access to organization resources
+
+When you install the DirectAccess and VPN (RAS) role services, you're deploying the Remote Access Service Gateway (RAS Gateway). You can deploy the RAS Gateway as a single tenant RAS Gateway virtual private network (VPN) server, a multitenant RAS Gateway VPN server, and as a DirectAccess server.
+* RAS Gateway - single tenant
+* RAS Gateway - multi tenant
+* Always On VPN.
+
+Explore VPN types and configuration
+
+Built-in VPN client
+
+Windows provides a built-in VPN client software that you can configure to establish various types of VPN connections. VPN connections can use different tunneling protocols. You should configure same tunneling protocol on both VPN server and VPN client side. In Windows, following tunneling protocols are supported:
+* Internet Key Exchange version 2 (IKEv2) - Configure the IPsec/IKE tunnel cryptographic properties using the Cryptography Suite setting in the VPNv2 Configuration Service Provider (CSP).
+* L2TP - L2TP with pre-shared key (PSK) authentication can be configured using the L2tpPsk setting in the VPNv2 CSP.
+* PPTP - Point-to-Point Tunneling Protocol.
+* SSTP - SSTP is supported for Windows desktop editions only. SSTP cannot be configured using mobile device management (MDM), but it’s one of the protocols attempted in the Automatic option.
+
+Deploy Always On VPN
+
+When preparing for Always On VPN deployment, you should ensure that you have following components in place:
+* Active Directory domain infrastructure, including one or more Domain Name System (DNS) servers. 
+* Active Directory-based public key infrastructure (PKI) and Active Directory Certificate Services (AD CS).
+* Physical server, either existing or new, to install Network Policy Server (NPS). 
+* Remote Access as a RAS Gateway VPN server with a small subset of features supporting IKEv2 VPN connections and LAN routing.
+* Perimeter network that includes two firewalls.
+* Physical server or VM on your perimeter network with two physical Ethernet network adapters to install Remote 
+Access as a RAS Gateway VPN server.
+* Membership in Administrators, or equivalent, is the minimum required.
+* Management platform of your choice for deploying the Always On VPN configuration because the CSP is not vendor-specific.

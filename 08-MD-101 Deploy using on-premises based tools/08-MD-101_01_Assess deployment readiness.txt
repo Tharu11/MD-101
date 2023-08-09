@@ -1,0 +1,68 @@
+Assess deployment readiness
+
+
+Many organizations recognize that an efficient and automated desktop deployment can enable them to achieve considerable cost savings.
+To realize this potential, you must identify your organization’s current computer software, hardware, and network infrastructure.
+Knowing what you can and cannot upgrade is key to properly planning a successful desktop deployment.
+This module provides information about some of the tools that you can use to perform detailed assessments of existing deployments, and it describes some of the challenges that you might face when performing these necessary assessments.
+
+Examine deployment guidelines
+
+You can accomplish an effective desktop deployment by implementing the following basic guidelines:
+* Take an inventory and establish a network map of the existing client computers, servers, and other relevant networking services to determine the installed application base and hardware types that your organization has deployed currently.
+* Determine what hardware you can reuse as part of the new computer deployment and which types you might need to retire.
+* Determine which applications you can redeploy on new desktop systems. 
+* Define a strategy for addressing applications that the new platform cannot support.
+* Reduce costs by utilizing Windows Server Hyper-V, Windows Virtual Desktop, Remote Desktop Services, Endpoint Manager, and the System Center product line.
+* Establish a process to capture user data, settings, and preferences on currently deployed systems and to restore the data on newly deployed systems.
+* Provide a method for backing up all the relevant data on currently deployed computers before redeployment.
+* Provide an end-to-end process for the actual desktop deployment. 
+* Create a plan for training users on the updated desktop systems.
+
+Assess application compatibility
+
+It's critical that you follow a set process for assessing and mitigating application compatibility issues. You must address application compatibility as an environment-wide approach rather than an unplanned activity. You can assess application compatibility with a measured and manageable process by following these steps:
+* Discover the apps that you want to continue to use in the Windows 10 or 11 environment.
+* Rationalize the apps to ensure that all discovered apps still fit into the organization’s app portfolio. If an app no longer has a practical use, you can remove it from the compatibility-assessment process.
+* Prioritize apps. Organizations might have hundreds, or even thousands of apps. It's financially and operationally impossible to test such a multitude of apps; therefore, you must prioritize your apps and decide which ones to test.
+* Test apps to ensure that the functionality that you require is available when the app runs in Windows 10 or later.
+* Mitigate any issues that you discover, which might include using built-in operating system compatibility functionality, upgrading an app, or replacing the app with one that functions properly in Windows 10 or later.
+
+Mitigation methods
+
+Some common mitigation methods include:
+* Modifying the configuration of an existing app.
+* Applying updates to an app.
+* Upgrading an app to a compatible version.
+* Modifying the security configuration.
+* Running an app in a virtualized environment.
+* Using app compatibility features.
+* Selecting another app that performs the same business function.
+
+Explore tools for application compatibility mitigation
+
+Application Compatibility Toolkit
+Application Compatibility Toolkit (ACT) is a set of tools used during the inventory, analyze, and mitigate phases of the application compatibility testing process. ACT consists of several features, including:
+*  database of known application issues and mitigations for those issues.
+* The Compatibility Administrator tool that can be used to create fixes for your applications to enable them to run correctly.
+* A setup analysis tool that helps identify problems with application setup.
+* The Standard User Analyzer that can identify issues with UAC restrictions that might affect your application’s functionality.
+
+Client Hyper-V
+Remote Desktop Services (RDS)
+Azure Virtual Desktop and Windows 365
+
+Prepare network and directory for deployment
+
+Delivery Optimization
+Branch Cache (Distributed Cache mode and Hosted Cache mode)
+BITS
+LEDBAT
+Migration data size
+Directory planning
+
+Plan a pilot -
+Phased deployment
+Phase 1: The IT team and early adopter insiders
+Phase 2: Pilot
+Phase 3 and beyond: Broad production deployment

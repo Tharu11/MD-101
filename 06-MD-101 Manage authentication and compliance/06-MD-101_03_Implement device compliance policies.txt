@@ -1,0 +1,62 @@
+Implement device compliance policies
+
+
+If your devices are managed by Intune, you can define how devices should be configured by using device compliance policies.
+Compliance policies define conditions that device must fulfill in order to be compliant and able to access company resources.
+
+Explore device compliance policy
+
+Device compliance policies outline the required settings for:
+* Passwords
+* Encryption
+* Jail-broken or rooted devices
+* The minimum operating-system version
+* The maximum operating-system version
+* The maximum Mobile Threat Defense level
+
+There are two types of noncompliant actions:
+* Notify end users via email.
+* Mark device noncompliant.
+
+Device compliance policies can be used in the following manner:
+* With conditional access.
+* Without conditional access. 
+
+Use Azure AD device groups for policies
+
+A group membership rule is used to automatically populate a group with users or devices. This is a binary expression that results in a True or False outcome. The three parts of a simple group membership rule include:
+* Property. 
+* Operator.
+* Value.
+
+Deploy a device compliance policy
+
+Before an organization can implement device compliance policies, it must first satisfy the following prerequisites:
+* It must be licensed for Azure AD Premium P1 or Azure AD Premium P2 and Intune. Both are part of Microsoft 365 or Enterprise Mobility + Security, but they can also be obtained separately.
+* Its devices run one of the following supported platforms:
+   * Android
+   * Android Enterprise
+   * iOS/iPadOS
+   * macOS
+   * Windows 8.1 or later
+* Its devices must be enrolled in Intune to be eligible for compliance management.
+
+Explore conditional access
+
+Conditional access is especially beneficial in certain scenarios.
+* Supporting apps that require multi-factor authentication (MFA).
+* Requiring MFA for untrusted networks. 
+* Allowing Microsoft 365 access only to trusted devices.
+
+Create conditional access policies
+
+Conditional
+A condition is a rule that Intune checks when performing conditional access. For example, a condition might be “when a device meets the password requirements.” Conditions can be based on the:
+* Device platform that is accessing the data.
+* Location from where the data is being accessed.
+* Client applications that are used to access the data.
+
+Controls
+Controls are the actions that are allowed or disallowed when a condition is met. For example, with the previous condition, a control might be “allow access.” Controls include:
+* Blocking access.
+* Granting access if one or more requirements are met.

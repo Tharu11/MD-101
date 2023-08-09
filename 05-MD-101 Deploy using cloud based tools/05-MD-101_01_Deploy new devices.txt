@@ -1,0 +1,119 @@
+Deploy new devices
+
+
+Traditionally, the process of deploying a new device begins with wiping the device with whatever operating system was pre-installed and deploying one of the organization’s images to the device.
+However when purchasing a device from an OEM, Windows 10 or Windows 11 is already the OS on the device.
+While simply using the OEM image isn’t practical, Windows 10 introduced a new process called Windows Autopilot.
+Autopilot is designed to achieve the desired outcome of deploying a new hardware or refreshing an existing hardware with the organization’s desired configuration, without the process of creating, managing, and pushing large images over the network.
+
+Use Autopilot for modern deployment
+
+Autopilot offers the following advantages over on-premises deployment methods:
+* You don't need to use images.
+* You don't need to customize the deployments by injecting drivers.
+* You don't need to deploy and maintain a deployment infrastructure.
+* Configuring Autopilot deployments are relatively simple compared to traditional image creation and management.
+* With no images to deploy, heavy bandwidth consumption is no longer a concern.
+
+Windows Autopilot is cloud-driven and based around Azure AD Premium and Microsoft Intune. Using Windows Autopilot, you can:
+* Join devices to Azure AD automatically.
+* Auto-enroll your users' devices into MDM services.
+* Restrict the creation of the Administrator account.
+* Customize the OOBE content specifically to your organization.
+
+
+Windows Configuration Designer and Windows Autopilot
+There are certain circumstances where traditional installation methods must be used instead of Autopilot. These scenarios include:
+* Bare-metal deployments.
+* When the storage hardware where Windows 10 or Windows 11 is installed must be replaced.
+* When the Windows 10 or Windows 11 installation has become corrupt.
+* When an organization requires prompts for custom user information beyond what the OOBE provides (such as customizing the LTI interface with MDT)
+
+Examine requirements for Windows Autopilot
+
+Before you can start using Windows Autopilot for Windows 10 or Windows 11 deployment, you must meet the following prerequisites:
+* Devices must have Windows 10 or Windows 11 preinstalled.
+* Windows Pro, Enterprise, or Education.
+* Devices must have internet connectivity.
+* Organization must be using Azure AD.
+* Intune or Microsoft Store for Business.
+* Intune or another mobile device management service (optional).
+
+Prepare device IDs for Autopilot
+
+After you meet all the prerequisites, you can set up Windows Autopilot deployment. The setup process includes:
+* Obtaining the hardware IDs of the devices that you want to deploy to the cloud service.
+* Uploading the hardware IDs
+* Creating a Windows Autopilot deployment profile.
+* Applying the Windows Autopilot deployment profile to the devices or device groups.
+
+Manage Windows Autopilot in Intune
+
+You can configure automatic mobile device management enrollment by performing the following steps:
+* In the Azure portal, select Azure Active Directory.
+* On the Azure Active Directory blade, select Mobility (MDM and MAM), and then in the details pane, select Microsoft Intune.
+* On the Microsoft Intune blade, in MDM user scope, select All if you want all users to be able to enroll their devices to mobile device management. If you want only some users to be able to enroll their devices to mobile device management, select Some, specify the groups whose members should be able to enroll, and then select Save.
+
+Implement device registration and out-of-the box customization
+
+Create a Windows Autopilot deployment profile
+
+Using Intune, you can use the following high-level procedure to create a deployment profile:
+* Sign in to Intune as a global admin, and in the portal, select Device enrollment, select Windows enrollment, select Deployment Profiles and then select Create Profile. Provide a Name and Description.
+* Then, for Deployment mode, choose between user-driven and self-deploying. With the former, the user specifies credentials during deployment, and devices with this profile are associated with the user account. With the latter, user credentials aren't required to enroll the device, and devices with this profile aren't associated with the user account.
+* Next, configure the Out-of-box experience (OOBE) settings, which include: language, keyboard, EULA, privacy settings, and user account.
+* Finally, create the profile. The Autopilot deployment profile is now available to assign to devices.
+
+Examine Autopilot scenarios
+
+Windows Autopilot supports several deployment scenarios depending on the desired experience:
+* Windows Autopilot user-driven mode
+* Windows Autopilot self-deploying mode
+* Autopilot for existing devices
+* Windows Autopilot for pre-provisioned deployment
+* Windows Autopilot reset
+
+User-driven mode
+
+The process is designed to be simple so that anyone can complete it, enabling devices to be shipped or distributed to the end user directly with simple instructions:
+* Unbox the device, plug it in, and turn it on.
+* Choose a language, locale and keyboard.
+* Connect it to a wireless or wired network with internet access.
+* Specify your e-mail address and password for your organization account.
+
+To enable User-driven mode for Azure Active Directory join, the following actions must be taken as part of preparing the Autopilot deployment:
+* Users must be able to join Azure AD.
+* If using Intune (and not Microsoft Store for Business), user-driven mode must be selected in the Autopilot profile assigned to the device if using Intune. The Autopilot profile must also be assigned to an Azure AD device group.
+* The device must be added to Windows Autopilot and a profile must be assigned to the device.
+
+User-driven mode is also supported for hybrid Azure Active Directory join. In addition to the actions above, the following steps must also be taken:
+* The device must be running Windows 1809 or later.
+* Hybrid Azure AD joined must be specified as the selected option under Join to Azure AD as in the Autopilot profile.
+* The device must be able to access the internet and an Active Directory domain controller.
+* The Intune Connector for Active Directory must be installed (this performs the on-prem AD join instead of requiring user permission to join).
+
+Self-deploying mode
+
+To perform a self-deploying mode deployment using Windows Autopilot:
+* Create an Autopilot profile for self-deploying mode with the desired settings. In Microsoft Intune, this mode is explicitly chosen when creating the profile. Note that this mode is not available using the Microsoft Store for Business.
+* Ensure that the profile has been assigned to the device before attempting to deploy that device.
+* Self-deploying mode requires devices with TPM 2.0 and Windows 10 version 1903 or later.
+
+Windows Autopilot for pre-provisioned deployment
+
+The process for configuring a pre-provisioned deployment is as follows:
+1. Enable the White Glove OOBE option in the desired Autopilot Profile.
+2. Connect (ethernet required for pre-provision) and boot the device. At the first OOBE screen press the Windows key five times.
+3. In the additional dialog options, select Windows Autopilot provisioning.
+4. Verify the device information. If changes are needed, complete them in Intune and select refresh to re-download the updated information.
+5. Select Provision to provision the device.
+6. When the process is complete, select Reseal.
+
+Troubleshoot Windows Autopilot
+
+When troubleshooting Windows Autopilot, the key things to verify are:
+* Configuration. Has Azure AD and Microsoft Intune (or an equivalent MDM service) been configured as specified in Windows Autopilot configuration requirements?
+* Network connectivity. Can the device access the services described in Windows Autopilot networking requirements?
+* Autopilot OOBE behavior. Were only the expected out-of-box experience screens displayed? Was the Azure AD credentials page customized with organization-specific details as expected?
+* Azure AD join issues. Was the device able to join Azure AD?
+* MDM enrollment issues. Was the device able to enroll in Microsoft Intune (or an equivalent MDM service)?

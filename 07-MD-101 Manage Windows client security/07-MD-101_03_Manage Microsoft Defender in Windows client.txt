@@ -1,0 +1,103 @@
+Manage Microsoft Defender in Windows client
+
+
+A computer that is running Windows is more likely to face threats that originate from the network than from any other location. 
+This is because attacks from the network can target a large number of computers and malicious users perform them remotely, whereas other forms of attacks require physical access to the computer.
+Windows client has a built-in security platform called Windows Security.
+
+Explore Windows Security Center
+
+Windows Security Center is turned on, by default and it works from the moment you install Windows operating system. It covers the following areas:
+* Virus and threat protection
+* Account protection
+* Firewall and network protection.
+* App and browser control. 
+* Device security.
+* Device performance & health.
+* Family options.
+* Protection History (Windows 11)
+
+Explore Windows Defender Credential Guard
+
+By enabling Windows Defender Credential Guard, the following features and solutions are provided:
+* Platform security features to protect credentials.
+* Virtualization-based security. 
+* Better protection against advanced persistent threats.
+
+Manage Microsoft Defender Antivirus
+
+You can add exclusions to stop Microsoft Defender Antivirus from alerting you to threats by adding files, folders, file types, or processes to the Exclusions list. To add an exclusion:
+* Open Windows Security Center.
+* In Virus & threat protection, select Virus & threat protection settings.
+* On the Virus & threat protection settings page, select Add or remove exclusions.
+* In the Exclusions section, select the plus sign, and then select File, Folder, File type, or Process 
+
+Depending on which type of exclusion you want to create. Exclusions for folders apply to subfolders as well.
+You can configure Microsoft Defender Antivirus with several tools, including:
+* Microsoft Intune
+* Configuration Manager
+* Group Policy
+* PowerShell cmdlets
+* Windows Management Instrumentation (WMI)
+
+The following broad categories of features can be configured:
+* Cloud-delivered protection
+* Always-on real-time protection, including behavioral, heuristic, and machine-learning-based protection
+* How end-users interact with the client on individual endpoints
+
+Manage Windows Defender Firewall
+
+Firewall exceptions
+To add, change, or remove allowed programs and ports, you should perform the following steps:
+* In the Control Panel, on the Windows Defender Firewall page, in the navigation pane, select Allow an app or feature through Windows Defender Firewall.
+* Select Change settings.
+
+To help decrease security risks when you open communications:
+* Only allow a program or open a port when necessary.
+* Remove programs from the list of allowed programs, or close ports when you do not require them.
+* Never allow a program that you do not recognize to communicate through the firewall.
+
+Multiple active firewall profiles
+
+There are three types of network location profiles:
+* Domain networks.
+* Private networks.
+* Guest or public networks. 
+
+Explore Windows Defender Firewall with Advanced Security
+
+Windows Defender Firewall with Advanced Security properties
+To access the global profile settings in Windows Defender Firewall with Advanced Security Properties, perform one of the following procedures:
+* In the navigation pane, right-click Windows Defender Firewall with Advanced Security, and then select Properties.
+* In the navigation pane, select Windows Defender Firewall with Advanced Security, and then in the Overview section, select Windows Defender Firewall Properties.
+* In the navigation pane, select Windows Defender Firewall with Advanced Security, and then in the Actions pane, select Properties.
+
+The options that you can configure for each of the three network profiles are:
+* Firewall state.
+* Inbound connections.
+* Outbound connections.
+* Protected network connections.
+* Settings.
+* Logging.
+
+Windows Defender Firewall with Advanced Security rules
+
+Rules are a collection of criteria that define what traffic you will allow, block, or secure with a firewall. You can configure the following types of rules:
+* Inbound
+* Outbound
+* Connection security rules
+
+Inbound and outbound rule types
+There are four different types of inbound and outbound rules:
+* Program rules.
+* Port rules.
+* Predefined rules.
+* Custom rules.
+
+Connection security rules
+You can create the following connection security rule types:
+* Isolation rules. 
+* Authentication exemption rules.
+* Server-to-server rules.
+* Tunnel rules.
+* Custom rules.
